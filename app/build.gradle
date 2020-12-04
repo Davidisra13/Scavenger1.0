@@ -44,3 +44,23 @@ dependencies {
 
     implementation 'com.firebaseui:firebase-ui-auth:6.4.0'
 }
+dependencies {
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    // Declare the dependencies for the desired Firebase products without specifying versions
+    // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+}
+dependencies {
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    // ...
+    implementation 'com.firebaseui:firebase-ui-auth:7.1.1'
+
+    // Required only if Facebook login support is required
+    // Find the latest Facebook SDK releases here: https://github.com/facebook/facebook-android-sdk/blob/master/CHANGELOG.md
+    implementation 'com.facebook.android:facebook-login:8.1.0'
+}
