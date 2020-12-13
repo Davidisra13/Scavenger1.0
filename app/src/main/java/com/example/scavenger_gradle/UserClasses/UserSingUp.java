@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.scavenger_gradle.MainActivity;
 import com.example.scavenger_gradle.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -55,7 +56,7 @@ public class UserSingUp extends AppCompatActivity {
 		//progressBar = findViewById(R.id.progressBar);
 
 		if(fAuth.getCurrentUser() != null){
-			startActivity(new Intent(getApplicationContext(), Scanner.class));
+			startActivity(new Intent(getApplicationContext(), ScannerScreen.class));
 			finish();
 		}
 
@@ -128,7 +129,7 @@ public class UserSingUp extends AppCompatActivity {
 									Log.d(TAG, "onFailure: " + e.toString());
 								}
 							});
-							startActivity(new Intent(getApplicationContext(), Scanner.class));
+							startActivity(new Intent(getApplicationContext(), ScannerScreen.class));
 
 						}else {
 							Toast.makeText(UserSingUp.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();

@@ -16,6 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.scavenger_gradle.UserClasses.Activity2;
+import com.example.scavenger_gradle.UserClasses.Activity3;
+import com.example.scavenger_gradle.UserClasses.Scanner;
 import com.example.scavenger_gradle.UserClasses.UserLogin;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -28,6 +31,8 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import javax.annotation.Nullable;
 
@@ -48,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.scanner_screen);
+
 //        phone = findViewById(R.id.profilePhone); // later implementation
 //        fullName = findViewById(R.id.profileName);
 //        email    = findViewById(R.id.profileEmail);
@@ -98,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+
 
 
 
@@ -174,10 +181,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-
     }
-
-
 
 
     public void logout(View view) {
