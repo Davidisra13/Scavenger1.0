@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.scanner_screen);
 //        phone = findViewById(R.id.profilePhone); // later implementation
 //        fullName = findViewById(R.id.profileName);
 //        email    = findViewById(R.id.profileEmail);

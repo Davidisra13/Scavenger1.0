@@ -21,7 +21,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -53,10 +52,10 @@ public class UserSingUp extends AppCompatActivity {
 
 		fAuth = FirebaseAuth.getInstance();
 		fStore = FirebaseFirestore.getInstance();
-		progressBar = findViewById(R.id.progressBar);
+		//progressBar = findViewById(R.id.progressBar);
 
 		if(fAuth.getCurrentUser() != null){
-			startActivity(new Intent(getApplicationContext(), UserSingUp.class));
+			startActivity(new Intent(getApplicationContext(), Scanner.class));
 			finish();
 		}
 
@@ -97,18 +96,19 @@ public class UserSingUp extends AppCompatActivity {
 
 							// send verification link
 
-							FirebaseUser fuser = fAuth.getCurrentUser();
-							fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
-								@Override
-								public void onSuccess(Void aVoid) {
-									Toast.makeText(UserSingUp.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
-								}
-							}).addOnFailureListener(new OnFailureListener() {
-								@Override
-								public void onFailure(@NonNull Exception e) {
-									Log.d(TAG, "onFailure: Email not sent " + e.getMessage());
-								}
-							});
+//							FirebaseUser fuser = fAuth.getCurrentUser();
+//							fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+//								@Override
+//								public void onSuccess(Void aVoid) {
+//									Toast.makeText(UserSingUp.this, "Verification Email Has been Sent.", Toast.LENGTH_SHORT).show();
+//								}
+//							}
+//						).addOnFailureListener(new OnFailureListener() {
+//								@Override
+//								public void onFailure(@NonNull Exception e) {
+//									Log.d(TAG, "onFailure: Email not sent " + e.getMessage());
+//								}
+//							});
 
 							Toast.makeText(UserSingUp.this, "User Created.", Toast.LENGTH_SHORT).show();
 							userID = fAuth.getCurrentUser().getUid();
@@ -128,11 +128,11 @@ public class UserSingUp extends AppCompatActivity {
 									Log.d(TAG, "onFailure: " + e.toString());
 								}
 							});
-							startActivity(new Intent(getApplicationContext(), UserSingUp.class));
+							startActivity(new Intent(getApplicationContext(), Scanner.class));
 
 						}else {
 							Toast.makeText(UserSingUp.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-							progressBar.setVisibility(View.GONE);
+							//progressBar.setVisibility(View.GONE);
 						}
 					}
 				});
