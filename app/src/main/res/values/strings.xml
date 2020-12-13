@@ -23,4 +23,6 @@
     <string name="or_enter_sku">or enter SKU:</string>
     <string name="sku">SKU</string>
     <string name="main_allergy">Main Allergy</string>
+    <string name="start_scanning">Start Scanning</string>
+    <string name="enter_sku_number">Enter SKU Number</string>
 </resources>

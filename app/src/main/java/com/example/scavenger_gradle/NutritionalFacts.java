@@ -36,7 +36,7 @@ import com.google.zxing.integration.android.IntentResult;
 
 import javax.annotation.Nullable;
 
-public class MainActivity extends AppCompatActivity {
+public class NutritionalFacts extends AppCompatActivity {
     private static final int GALLERY_INTENT_CODE = 1023 ;
     TextView fullName,email,phone,verifyMsg;
     FirebaseAuth fAuth;
@@ -144,12 +144,12 @@ public class MainActivity extends AppCompatActivity {
                         user.updatePassword(newPassword).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
-                                Toast.makeText(MainActivity.this, "Password Reset Successfully.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(NutritionalFacts.this, "Password Reset Successfully.", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(MainActivity.this, "Password Reset Failed.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(NutritionalFacts.this, "Password Reset Failed.", Toast.LENGTH_SHORT).show();
                             }
                         });
                     }

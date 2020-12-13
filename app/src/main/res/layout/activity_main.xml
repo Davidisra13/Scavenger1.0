@@ -6,30 +6,74 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wallpaper"
-    tools:context=".UserClasses.UserSingUp">
+    tools:context=".UserClasses.Scanner">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/StartScanning"
+        android:layout_alignBottom="@+id/StartScanning"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="-225dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="231dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/start_using_scavenger"
+        android:textColor="#FFEB3B"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
 
     <Button
-        android:id="@+id/scanBtn"
+        android:id="@+id/StartScanning"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Start Scanning"
-        android:textSize="30sp"/>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/scanBtn"
-        android:layout_alignStart="@+id/scanBtn"
-        android:layout_alignEnd="@+id/scanBtn"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="154dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="133dp"
-        android:visibility="invisible" />
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="355dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="@string/start_scanning"
+        android:textAlignment="viewStart"
+        android:textSize="13sp" />
+
+    <EditText
+        android:id="@+id/SKU"
+        android:layout_width="303dp"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="249dp"
+        android:autofillHints=""
+        android:background="@color/purple_500"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-light"
+        android:hint="@string/enter_sku_number"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StartScanning"
+        app:layout_constraintVertical_bias="0.188" />
 
 
 </RelativeLayout>
